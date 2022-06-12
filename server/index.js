@@ -10,7 +10,7 @@ const CreateBookingRoute = require("./routes/CreateBookingRoute");
 const UploadFileRoute = require("./routes/UploadFileRoute");
 const FiltersRoute = require("./routes/FiltersRoute")
 app.use(cors());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"))); 
 app.use(bp.json());
 app.use(bp.urlencoded({ extended: true }));
 
