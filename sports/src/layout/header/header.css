@@ -1,0 +1,118 @@
+.header-wrapper {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+.header-part-left {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-part-left .logo {
+  width: 70%;
+  height: 55%;
+}
+
+.header-middle {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+  color: black;
+  font-family: "firaGo-medium";
+}
+.header-middle a {
+  text-decoration: none;
+  color: #1d1d1d;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.2s ease-in-out;
+}
+.header-middle a:hover {
+  color: #969090;
+  transition: 0.2s ease-in-out;
+}
+
+.header-part-right {
+  width: 11%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.bookdemo-wrapper {
+  display: inline-flex;
+  width: 150px;
+  height: 37px;
+  align-self: center;
+}
+.bookdemo-wrapper .bookdemo {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  line-height: 1px;
+  font-family: "firaGo-medium";
+}
+.bookdemo-wrapper .bookdemo:before,
+.bookdemo-wrapper .bookdemo:after {
+  position: absolute;
+  content: "დამატება";
+  width: 150px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.bookdemo-wrapper .bookdemo:before {
+  color: black;
+  background: #fff;
+  border: 2px solid black;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.bookdemo-wrapper .bookdemo:after {
+  color: white;
+  background: black;
+  border: 2px solid black;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.bookdemo-wrapper .bookdemo:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+.demos {
+  width: 200px;
+  height: 100px;
+  background-color: #646ecb;
+  display: none;
+  position: absolute;
+  top: 70px;
+  transition: 0.5s ease-in-out;
+  right: 57%;
+  border-radius: 5px;
+}
+.header-middle a:hover + .demos {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  font-family: Poppins-small;
+}

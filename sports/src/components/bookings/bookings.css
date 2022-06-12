@@ -1,0 +1,33 @@
+.filters-container {
+  width: 62vw;
+  height: 80vh;
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+.filters-container-left {
+  width: 30%;
+  height: 100%;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filters-container-right {
+  width: 66%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 900px;
+}
+.invisible{
+  height: 600px;
+  width: 100%;
+}

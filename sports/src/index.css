@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Poppins-huge";
+  src: url("../src/assets/fonts/poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins-medium";
+  src: url("../src/assets/fonts/poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins-small";
+  src: url("../src/assets/fonts/poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: "Poppins-large";
+  src: url("../src/assets/fonts/poppins/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "firaGo-large";
+  src: url("../src/assets/fonts/firaGo/FiraGO-Bold.otf");
+}
+@font-face {
+  font-family: "firaGo-medium";
+  src: url("../src/assets/fonts/firaGo/FiraGO-Medium.otf");
+}
+@font-face {
+  font-family: "firaGo-small";
+  src: url("../src/assets/fonts/firaGo/FiraGO-Thin.otf");
+}
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+h6,
+a,
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+p {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 0px;
+}

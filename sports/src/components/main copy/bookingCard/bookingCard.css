@@ -1,0 +1,46 @@
+.booking-card {
+  width: 350px;
+  height: 450px;
+  background-color: #656ecb;
+  border-radius: 20px;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.booking-card-top {
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.booking-card-middle {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.booking-card-name {
+  font-family: firaGo-medium;
+  font-size: 27px;
+  margin-bottom: 0px;
+  color: white;
+}
+.booking-card-street {
+  font-family: firaGo-small;
+  font-size: 14px;
+  color: rgb(250, 249, 249);
+  align-self: flex-start;
+}
+.booking-card-bottom {
+  width: 100%;
+  height: 6%;
+  font-family: firaGo-medium;
+  display: flex;
+  align-items: flex-start;
+  font-size: 30px;
+}
