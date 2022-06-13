@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
   console.log(req.body, "😎");
 
   db.query(
-    "INSERT INTO activityInfo (name,street,size,surface,covered,dressing,parking,fanSpace,shower,light,price,numberOfPlayers,image) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+    "INSERT INTO activityinfo (name,street,size,surface,covered,dressing,parking,fanSpace,shower,light,price,numberOfPlayers,image) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
     [
       name,
       street,
@@ -49,7 +49,7 @@ router.post("/", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  db.query("SELECT * from activityInfo", (err, result) => {
+  db.query("SELECT * from activityinfo", (err, result) => {
     if (err) {
       console.log(err);
     } else {

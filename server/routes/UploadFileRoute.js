@@ -16,7 +16,7 @@ router.post("/", upload.single("avatar"), (req, res) => {
     function () {}
   );
   db.query(
-    "UPDATE activityInfo SET image = ? where id = ?",
+    "UPDATE activityinfo SET image = ? where id = ?",
     [newFileName, req.body.id],
     (err, result) => {
       if (err) {
