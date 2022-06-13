@@ -160,7 +160,7 @@
 .sider-sign-in {
   width: 100%;
   height: 40px;
-  color: #f2622b;
+  color: #656ecb;
   background-color: white;
   font-family: "firaGo-small";
   font-weight: bold;
@@ -173,7 +173,7 @@
   font-family: "firaGo-small";
   font-weight: bold;
   border: none;
-  background-color: #f2622b;
+  background-color: #656ecb;
   color: white;
 }
 @media only screen and (max-width: 800px) {
