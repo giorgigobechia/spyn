@@ -22,11 +22,7 @@ function Header() {
       </div>
       <div className="header-middle">
         <Link to="/booking">მოედნები</Link>
-        <div className="demos">
-          <p className="demoSports">Tennis Club</p>
-          <p className="demoSports">Tennis Academy</p>
-          <p className="demoSports">Tennis Courses</p>
-        </div>
+
         <a href="#">კორტის დაჯავშნა</a>
         <a href="#">ახალი დამატებული</a>
         <a href="#">ონლაინ მაღაზია</a>

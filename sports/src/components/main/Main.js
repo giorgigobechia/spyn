@@ -126,8 +126,9 @@ function Main() {
         >
           <Grid
             container
-            spacing={{ xs: 2, md: 2, sm: 5,  }}
-            columns={{ xxl: 6, xl: 9, lg: 6,sm: 4, md: 4 }}
+            spacing={{ xs: 2, md: 2, sm: 5 }}
+            columns={{ xxl: 6, xl: 9, lg: 6, sm: 4, md: 4 }}
+            style={{ marginLeft: "0px", marginRight: "7px" }}
           >
             {bookings?.map((booking) => {
               return (
@@ -139,7 +140,6 @@ function Main() {
                   sm={4}
                   md={2}
                   key={booking.id}
-                 
                   style={{
                     background: "none",
                     border: "none",
@@ -151,7 +151,6 @@ function Main() {
                     key={booking.id}
                     onClick={() => handleSelect(booking)}
                     style={{ boxShadow: "0px" }}
-                
                   >
                     <BookingCard
                       key={booking.id}

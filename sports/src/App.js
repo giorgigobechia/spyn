@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import BookingPage from "./components/bookingPage/BookingPage";
 import Bookings from "./components/bookings/Bookings";
 import CreateBookingPage from "./components/createBookingPage/CreateBookingPage";
+import SignIn from "./components/registration/sign-in/SignIn";
+import SignUp from "./components/registration/sign-up/SignUp";
 import Layout from "./layout/Layout";
 function App() {
   // const [data, setData] = useState("");
@@ -36,6 +38,8 @@ function App() {
         <Route path="/" element={<Layout />} />
         <Route path="/createBooking" element={<CreateBookingPage />} />
         <Route path="/booking" element={<Bookings />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-in" element={<SignIn />} />
       </Routes>
     </div>
   );
