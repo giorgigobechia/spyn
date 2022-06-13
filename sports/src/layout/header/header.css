@@ -183,6 +183,11 @@
   .bookdemo-wrapper .bookdemo {
     display: none;
   }
+  .header-part-left .logo {
+    width: 70%;
+    height: 55%;
+    margin-right: 40px;
+  }
 }
 @media only screen and (min-width: 800px) {
   .open-sider {
