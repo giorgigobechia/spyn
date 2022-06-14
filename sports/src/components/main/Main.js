@@ -29,7 +29,7 @@ const Item = styled(Paper)(({ theme }) => ({
 function Main() {
   const [bookings, setBookings] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [seletedBooking, setSelectedBooking] = useState(null);
+  const [selectedBooking, setSelectedBooking] = useState(null);
 
   const handleSelect = (selected) => {
     setSelectedBooking({ ...selected });
@@ -61,29 +61,33 @@ function Main() {
   return (
     <div className="main">
       <Modal
-        title={seletedBooking?.name}
+        title={selectedBooking?.name}
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <p>ადგილმდებარეობა: {seletedBooking?.street}</p>
-        <p>ზომა(მეტრი): {seletedBooking?.size}</p>
+        {console.log(
+          selectedBooking?.image == null ? "NULL" : selectedBooking?.image,
+          "💕"
+        )}
+        <p>ადგილმდებარეობა: {selectedBooking?.street}</p>
+        <p>ზომა(მეტრი): {selectedBooking?.size}</p>
         <img
-          src={`uploads/` + seletedBooking?.image}
+          src={`uploads/` + selectedBooking?.image}
           alt=""
           style={{ width: "100%", height: "280px" }}
         />
         <p>
           საფარი:{" "}
-          {seletedBooking?.surface == "natural" ? "ბუნებრივი" : "ხელოვნური"}
+          {selectedBooking?.surface == "natural" ? "ბუნებრივი" : "ხელოვნური"}
         </p>
         <p>
-          გადახურვა: {seletedBooking?.covered == "open" ? "ღია" : "დაკეტილი"}
+          გადახურვა: {selectedBooking?.covered == "open" ? "ღია" : "დაკეტილი"}
         </p>
-        <p>მოთამაშეების რაოდენობა: {seletedBooking?.numberOfPlayers}</p>
+        <p>მოთამაშეების რაოდენობა: {selectedBooking?.numberOfPlayers}</p>
         <p>
           გასახდელი:{" "}
-          {seletedBooking?.dressing == true ? (
+          {selectedBooking?.dressing == true ? (
             <FcCheckmark />
           ) : (
             <AiOutlineClose style={{ fill: "red" }} />
@@ -91,7 +95,7 @@ function Main() {
         </p>
         <p>
           პარკინგი:{" "}
-          {seletedBooking?.parking == true ? (
+          {selectedBooking?.parking == true ? (
             <FcCheckmark />
           ) : (
             <AiOutlineClose style={{ fill: "red" }} />
@@ -99,7 +103,7 @@ function Main() {
         </p>
         <p>
           საგულშემატკვირო სივრცე:{" "}
-          {seletedBooking?.fanSpace == true ? (
+          {selectedBooking?.fanSpace == true ? (
             <FcCheckmark />
           ) : (
             <AiOutlineClose style={{ fill: "red" }} />
@@ -107,15 +111,15 @@ function Main() {
         </p>
         <p>
           საშხაპე:{" "}
-          {seletedBooking?.shower == true ? (
+          {selectedBooking?.shower == true ? (
             <FcCheckmark />
           ) : (
             <AiOutlineClose style={{ fill: "red" }} />
           )}
         </p>
-        <h1>საათობრივი ფასი: {seletedBooking?.price + "₾"}</h1>
+        <h1>საათობრივი ფასი: {selectedBooking?.price + "₾"}</h1>
       </Modal>
-      <Container fixed style={{ width: "116vh" }}>
+      <Container fixed style={{ width: "150vh" }}>
         <Box
           sx={{
             bgcolor: "none",
