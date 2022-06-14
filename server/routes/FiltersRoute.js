@@ -3,19 +3,12 @@ const router = express.Router();
 const db = require("../connection/dbConnection");
 
 router.get(`/`, (req, res) => {
+  const { surface } = req.query;
   console.log(req.query.surface, "THIS IS QUERRY FROM BACKeND");
   const dbQuery = "SELECT * " + "FROM `activityinfo` " + "WHERE `surface` = ?";
-  if (req.query.surface.includes("artificial")) {
-    db.query(dbQuery, ["artificial"], (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.send(result);
-      }
-    });
-    console.log("artificial");
-  } else if (req.query.surface.includes("natural")) {
-    db.query(dbQuery, ["natural"], (err, result) => {
+
+  if (surface) {
+    db.query(dbQuery, [surface], (err, result) => {
       if (err) {
         console.log(err);
       } else {
@@ -32,6 +25,7 @@ router.get(`/`, (req, res) => {
       }
     });
   }
+
   // if (req.query = "artificial") {
   //   db.query(query,["artificial"],(err,result) => {
   //     console.log(err)
